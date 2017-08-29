@@ -8,24 +8,24 @@
     // Sticky nav
 
     var header = $('.main-nav'),
-      // pos = header.scrollTop();
-      // console.log(pos);
-      pos = 570.1999756097794;
+      pos = header.offset();
+
+
     $(window).scroll(function() {
-      console.log(parseInt(pos) - 20)
-      if ($(this).scrollTop() > parseInt(pos) - 20 && header.hasClass(
-          'default')) {
-        header.fadeOut('fast', function() {
-          $(this).removeClass('default').addClass(
-            'switched-header').slideDown(200);
-        });
-      } else if ($(this).scrollTop() <= parseInt(pos) - 20 && header.hasClass(
-          'switched-header')) {
-        header.slideUp(200, function() {
-          $(this).removeClass('switched-header').addClass(
-            'default').fadeIn(200);
-        });
-      }
+      // if ($(this).scrollTop() > "pos.top-20" && header.hasClass(
+      //     'default')) {
+      //   header.fadeOut('fast', function() {
+      //     $(this).removeClass('default').addClass(
+      //       'switched-header').slideDown(200);
+      //   });
+      // } else if ($(this).scrollTop() <= "pos.top-20" && header.hasClass(
+      //     'switched-header')) {
+      //   header.slideUp(200, function() {
+      //     $(this).removeClass('switched-header').addClass(
+      //       'default').fadeIn(200);
+      //   });
+      // }
+      console.log(pos);
     });
 
     // Section scroll
